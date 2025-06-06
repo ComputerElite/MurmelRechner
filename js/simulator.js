@@ -43,12 +43,12 @@ function executeLine() {
   // evaluate code
   switch (cmd) {
     case 'jmp':
-      line = param - 1;
+      line = param;
       break;
 
     case 'tst':
       // If register exists and it does not conatin content
-      if (registers[param - 1] != null && !(registers[param - 1] > 0)) line++;
+      if (registers[param] != null && !(registers[param] > 0)) line++;
       break;
 
     case 'hlt':
@@ -56,11 +56,11 @@ function executeLine() {
       return;
 
     case 'inc':
-      addToRegister(param - 1);
+      addToRegister(param);
       break;
 
     case 'dec':
-      removeFromRegister(param - 1);
+      removeFromRegister(param);
       break;
 
     default:
