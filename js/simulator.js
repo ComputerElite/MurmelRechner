@@ -43,7 +43,7 @@ function executeLine() {
   // evaluate code
   switch (cmd) {
     case 'jmp':
-      line = param;
+      line = param - 1;
       break;
 
     case 'tst':
